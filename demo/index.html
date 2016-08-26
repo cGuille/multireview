@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  <title>select multiple with summary</title>
+  <style>
+body {
+  font-family: georgia, arial;
+}
+  </style>
+  <meta content="Demo of a JS widget to enhance <select multiple>" name="description" />
+  <meta content="html select js widget component" name="keywords" />
+  <link rel="stylesheet" href="../multireview.css">
+</head>
+<body>
+  <p>
+    Example: feature toggling. You have to choose which features are enabled and which are not.
+    <br />
+    Here is the same <code>&lt;select&gt;</code> element, without and with the <code>multireview</code> class.
+  </p>
+  <form method="GET" action="/form_result">
+    <select name="features" multiple style="min-width: 50wh; min-height: 15vh;">
+      <optgroup label="Social media features">
+        <option value="1">Social buttons</option>
+        <option value="2" selected>Social media authentication</option>
+        <option value="3">Social medial registration</option>
+      </optgroup>
+      <optgroup label="User account features">
+        <option value="4" selected>Profile picture</option>
+        <option value="5">Website field in profile</option>
+        <option value="6" selected>Register to newsletter</option>
+        <option value="7" selected>Delete my comments</option>
+      </optgroup>
+    </select>
+    <button type="submit">Save</button>
+  </form>
+
+  <hr />
+
+  <form method="GET" action="/form_result">
+    <select name="features" multiple
+      class="multireview"
+      data-selected-label="Enabled features"
+      data-unselected-label="Disabled features"
+      data-to-be-selected-label="Features to enable"
+      data-to-be-deselected-label="Features to disable">
+      <optgroup label="Social media features">
+        <option value="1">Social buttons</option>
+        <option value="2" selected>Social media authentication</option>
+        <option value="3">Social medial registration</option>
+      </optgroup>
+      <optgroup label="User account features">
+        <option value="4" selected>Profile picture</option>
+        <option value="5">Website field in profile</option>
+        <option value="6" selected>Register to newsletter</option>
+        <option value="7" selected>Delete my comments</option>
+      </optgroup>
+    </select>
+    <button type="submit">Save</button>
+  </form>
+</body>
+<script src="../multireview.js"></script>
+</html>

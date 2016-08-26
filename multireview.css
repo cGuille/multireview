@@ -1,0 +1,14 @@
+.multireview-container .multireview {
+    display: none;
+}
+
+.multireview-widget ul {
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+
+.multireview-current-state, .multireview-upcoming-changes {
+    display: flex;
+    justify-content: space-around;
+}
